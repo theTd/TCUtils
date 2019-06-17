@@ -28,6 +28,11 @@
       <artifactId>tcutils-msgfix</artifactId>
       <version>${tcutils.msgfix.version}</version>
     </dependency>
+    <dependency>
+      <groupId>me.thetd.tcutils</groupId>
+      <artifactId>tcutils-autosave</artifactId>
+      <version>${tcutils.autosave.version}</version>
+    </dependency>
   </dependencies>
 
   <build>

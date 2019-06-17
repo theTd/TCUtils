@@ -1,9 +1,6 @@
 package me.thetd.TCUtils;
 
-import me.thetd.tcutils.AutoRespawn;
-import me.thetd.tcutils.ModuleInitializer;
-import me.thetd.tcutils.MsgFix;
-import me.thetd.tcutils.TCUtilsModuleManager;
+import me.thetd.tcutils.*;
 
 class Initializer implements ModuleInitializer {
 
@@ -11,5 +8,6 @@ class Initializer implements ModuleInitializer {
     public void initializeModules(TCUtilsModuleManager moduleManager) {
         moduleManager.add(AutoRespawn.class, false, "ProtocolLib");
         moduleManager.add(MsgFix.class, false);
+        moduleManager.add(AutoSave.class, false);
     }
 }
