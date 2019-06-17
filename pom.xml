@@ -14,6 +14,7 @@
     <module>autorespawn</module>
     <module>msgfix</module>
     <module>autosave</module>
+    <module>publicminecart</module>
   </modules>
 
   <name>TCUtils</name>
@@ -28,6 +29,7 @@
     <tcutils.autorespawn.version>1.0</tcutils.autorespawn.version>
     <tcutils.msgfix.version>1.0</tcutils.msgfix.version>
     <tcutils.autosave.version>1.0</tcutils.autosave.version>
+    <tcutils.publicminecart.version>1.0</tcutils.publicminecart.version>
   </properties>
 
   <repositories>
@@ -36,15 +38,6 @@
       <url>https://repo.thetd.me/repository/zhuapublic/</url>
     </repository>
   </repositories>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.spigotmc</groupId>
-      <artifactId>spigot</artifactId>
-      <version>1.14.2</version>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

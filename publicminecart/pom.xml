@@ -9,28 +9,15 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>tcutils-core</artifactId>
-  <version>${tcutils.core.version}</version>
+  <artifactId>tcutils-publicminecart</artifactId>
+  <version>${tcutils.publicminecart.version}</version>
 
   <dependencies>
     <dependency>
-      <groupId>org.spigotmc</groupId>
-      <artifactId>spigot</artifactId>
-      <version>1.14.2</version>
-    </dependency>
-    <dependency>
-      <groupId>org.totemcraftmc</groupId>
-      <artifactId>TCBaseLib-api</artifactId>
-      <version>2.11</version>
+      <groupId>me.thetd.tcutils</groupId>
+      <artifactId>tcutils-core</artifactId>
+      <version>${tcutils.core.version}</version>
     </dependency>
   </dependencies>
 
-  <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-      </resource>
-    </resources>
-  </build>
 </project>

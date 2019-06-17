@@ -1,3 +1,4 @@
 name: TCUtils
 main: me.thetd.tcutils.TCUtilsPlugin
 version: ${project.version}
+api-version: '1.3'
