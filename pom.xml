@@ -12,6 +12,7 @@
     <module>core</module>
     <module>assemble</module>
     <module>autorespawn</module>
+    <module>msgfix</module>
   </modules>
 
   <name>TCUtils</name>
@@ -24,6 +25,7 @@
     <tcutils.core.version>1.0</tcutils.core.version>
     <tcutils.assemble.version>1.0</tcutils.assemble.version>
     <tcutils.autorespawn.version>1.0</tcutils.autorespawn.version>
+    <tcutils.msgfix.version>1.0</tcutils.msgfix.version>
   </properties>
 
   <repositories>

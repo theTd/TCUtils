@@ -23,6 +23,11 @@
       <artifactId>tcutils-autorespawn</artifactId>
       <version>${tcutils.autorespawn.version}</version>
     </dependency>
+    <dependency>
+      <groupId>me.thetd.tcutils</groupId>
+      <artifactId>tcutils-msgfix</artifactId>
+      <version>${tcutils.msgfix.version}</version>
+    </dependency>
   </dependencies>
 
   <build>
