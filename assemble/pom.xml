@@ -38,6 +38,11 @@
       <artifactId>tcutils-publicminecart</artifactId>
       <version>${tcutils.publicminecart.version}</version>
     </dependency>
+    <dependency>
+      <groupId>me.thetd.tcutils</groupId>
+      <artifactId>tcutils-objectiveschedule</artifactId>
+      <version>${tcutils.objectiveschedule.version}</version>
+    </dependency>
   </dependencies>
 
   <build>

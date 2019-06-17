@@ -10,5 +10,6 @@ class Initializer implements ModuleInitializer {
         moduleManager.add(MsgFix.class, false);
         moduleManager.add(AutoSave.class, false);
         moduleManager.add(PublicMinecart.class, false);
+        moduleManager.add(ObjectiveSchedule.class, false);
     }
 }

@@ -15,6 +15,7 @@
     <module>msgfix</module>
     <module>autosave</module>
     <module>publicminecart</module>
+    <module>objectiveschedule</module>
   </modules>
 
   <name>TCUtils</name>
@@ -30,6 +31,7 @@
     <tcutils.msgfix.version>1.0</tcutils.msgfix.version>
     <tcutils.autosave.version>1.0</tcutils.autosave.version>
     <tcutils.publicminecart.version>1.0</tcutils.publicminecart.version>
+    <tcutils.objectiveschedule.version>1.0</tcutils.objectiveschedule.version>
   </properties>
 
   <repositories>
