@@ -13,16 +13,7 @@
   <version>${tcutils.core.version}</version>
 
   <dependencies>
-    <dependency>
-      <groupId>org.spigotmc</groupId>
-      <artifactId>spigot</artifactId>
-      <version>1.14.2</version>
-    </dependency>
-    <dependency>
-      <groupId>org.totemcraftmc</groupId>
-      <artifactId>TCBaseLib-api</artifactId>
-      <version>2.11</version>
-    </dependency>
+
   </dependencies>
 
   <build>

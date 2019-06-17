@@ -39,6 +39,21 @@
     </repository>
   </repositories>
 
+  <dependencies>
+    <dependency>
+      <groupId>org.spigotmc</groupId>
+      <artifactId>spigot</artifactId>
+      <version>1.14.2</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.totemcraftmc</groupId>
+      <artifactId>TCBaseLib-api</artifactId>
+      <version>2.11</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
