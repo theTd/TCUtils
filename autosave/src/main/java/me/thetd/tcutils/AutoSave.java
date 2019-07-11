@@ -50,6 +50,7 @@ public class AutoSave extends TCUtilsModule implements Listener {
 
             if (countdown <= 0) {
                 // trigger
+                Bukkit.savePlayers();
                 Bukkit.getWorlds().forEach(World::save);
                 bossBar.removeAll();
                 bossBar.setVisible(false);
