@@ -10,7 +10,7 @@ public class TCUtilsPlugin extends JavaPlugin {
         saveDefaultConfig();
 
         try {
-            ((ModuleInitializer) Class.forName("me.thetd.TCUtils.Initializer").newInstance())
+            ((ModuleInitializer) Class.forName("me.thetd.tcutils.Initializer").newInstance())
                     .initializeModules(moduleManager);
         } catch (Throwable e) {
             e.printStackTrace();

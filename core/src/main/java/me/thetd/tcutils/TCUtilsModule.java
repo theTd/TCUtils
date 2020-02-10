@@ -1,5 +1,6 @@
 package me.thetd.tcutils;
 
+import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.ConfigurationSection;
 import org.totemcraftmc.bukkitplugin.TCBaseLib.simplemodule.Module;
 
@@ -27,6 +28,9 @@ public abstract class TCUtilsModule implements Module<TCUtilsPlugin> {
     }
 
     protected abstract void load() throws Exception;
+
+    protected void initConfig(ConfigurationSection config) {
+    }
 
     public boolean isLoaded() {
         return loaded;

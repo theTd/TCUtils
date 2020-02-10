@@ -6,6 +6,8 @@ import org.bukkit.World;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
+import org.bukkit.configuration.Configuration;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
@@ -24,6 +26,12 @@ public class AutoSave extends TCUtilsModule implements Listener {
 
     public AutoSave() {
         super("AutoSave");
+    }
+
+    @Override
+    protected void initConfig(ConfigurationSection config) {
+        config.set("interval", 20 * 60 * 10);
+        config.set("notify", 20 * 30);
     }
 
     @Override

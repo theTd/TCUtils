@@ -82,7 +82,7 @@ public class PublicMinecart extends TCUtilsModule implements Listener {
         if (e.getBlock().getData() == 13) face = BlockFace.EAST;
 
         Block target = e.getBlock().getRelative(face);
-        if (target.getType() == Material.RAIL ||
+        if (target.getType() == Material.RAILS ||
                 target.getType() == Material.ACTIVATOR_RAIL ||
                 target.getType() == Material.DETECTOR_RAIL ||
                 target.getType() == Material.POWERED_RAIL) {

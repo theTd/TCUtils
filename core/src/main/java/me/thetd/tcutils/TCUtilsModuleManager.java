@@ -4,6 +4,7 @@ package me.thetd.tcutils;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
+import org.bukkit.configuration.ConfigurationSection;
 import org.totemcraftmc.bukkitplugin.TCBaseLib.simplemodule.Module;
 import org.totemcraftmc.bukkitplugin.TCBaseLib.simplemodule.ModuleManager;
 import org.totemcraftmc.bukkitplugin.TCBaseLib.util.FormatUtil;
@@ -15,7 +16,7 @@ import java.util.stream.Collectors;
 
 public class TCUtilsModuleManager extends ModuleManager<TCUtilsPlugin> {
     private final List<ModuleRegistration> registration = new ArrayList<>();
-    private final Set<Class> defaultLoadModules = new HashSet<>();
+    private final Set<Class<?>> defaultLoadModules = new HashSet<>();
 
     TCUtilsModuleManager(TCUtilsPlugin plugin) {
         super(plugin);
@@ -49,6 +50,19 @@ public class TCUtilsModuleManager extends ModuleManager<TCUtilsPlugin> {
         for (Module<TCUtilsPlugin> m : list) {
             TCUtilsModule module = (TCUtilsModule) m;
             try {
+                ConfigurationSection moduleConfigCtx = null;
+                if (plugin.getConfig().isConfigurationSection(module.getName())) {
+                    moduleConfigCtx = plugin.getConfig().getConfigurationSection(module.getName());
+                }
+                if (moduleConfigCtx == null) {
+                    moduleConfigCtx = plugin.getConfig().createSection(module.getName());
+                    if (!defaultLoadModules.contains(m.getClass())) {
+                        moduleConfigCtx.set("enabled", false);
+                    }
+                    module.initConfig(moduleConfigCtx.createSection("config"));
+                    plugin.saveConfig();
+                }
+
                 if (plugin.getConfig().getBoolean(module.getName() + ".enabled", defaultLoadModules.contains(m.getClass()))) {
                     plugin.getLogger().info("loading module " + module.getClass().getSimpleName());
                     module.load(plugin);
@@ -96,7 +110,7 @@ public class TCUtilsModuleManager extends ModuleManager<TCUtilsPlugin> {
         registration.add(new ModuleRegistration(moduleClass, defaultLoad, new HashSet<>(Arrays.asList(dependencies))));
     }
 
-    private class ModuleRegistration {
+    private static class ModuleRegistration {
         private final Class<? extends TCUtilsModule> moduleClass;
         private final Set<String> dependencies;
         private final boolean defaultLoad;
